@@ -12,6 +12,9 @@ const Navbar = () => {
         width: "600px",
         mt: 30,
         pr: 30,
+        "&:hover": {
+          cursor: "pointer",
+        },
       }}
     >
       <Flex sx={{ justifyContent: "space-between" }}>

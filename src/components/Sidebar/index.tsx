@@ -24,6 +24,9 @@ const Sidebar = () => {
           mt: 50,
           pr: 30,
           position: "relative",
+          "&:hover": {
+            cursor: "pointer",
+          },
         }}
       >
         <Box
@@ -31,9 +34,6 @@ const Sidebar = () => {
             position: "fixed",
             top: 30,
             right: [115, 115, 165],
-            "&:hover": {
-              cursor: "pointer",
-            },
           }}
           onClick={toggleDisplay}
         >
