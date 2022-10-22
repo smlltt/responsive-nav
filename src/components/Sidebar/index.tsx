@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Flex } from "theme-ui";
-import { Menu } from "react-feather";
+import Hamburger from "./Hamburger";
 
 enum DisplayEnum {
   NONE = "none",
@@ -29,17 +29,10 @@ const Sidebar = () => {
           },
         }}
       >
-        <Box
-          sx={{
-            position: "fixed",
-            top: 30,
-            right: [115, 115, 165],
-          }}
-          onClick={toggleDisplay}
-        >
-          <Menu />
-        </Box>
-
+        <Hamburger
+          toggleDisplay={toggleDisplay}
+          isOpen={displayBar === DisplayEnum.FLEX}
+        />
         <Flex
           sx={{
             display: displayBar,
