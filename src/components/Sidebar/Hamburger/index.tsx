@@ -16,7 +16,7 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
         right: [100, 100, 150],
         height: "2rem",
         justifyContent: "space-around",
-        opacity: isOpen ? 0.7 : 1,
+        opacity: isOpen ? 0.6 : 1,
         flexFlow: "column nowrap",
       }}
       onClick={toggleDisplay}
