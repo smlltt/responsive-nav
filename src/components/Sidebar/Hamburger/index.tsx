@@ -24,6 +24,7 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
       <Line
         sx={{
           transform: isOpen ? "rotate(45deg)" : "rotate(0)",
+          transformOrigin: "top left",
         }}
       />
       <Line
@@ -35,6 +36,7 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
       <Line
         sx={{
           transform: isOpen ? "rotate(-45deg)" : "rotate(0)",
+          transformOrigin: "bottom left",
         }}
       />
     </Flex>

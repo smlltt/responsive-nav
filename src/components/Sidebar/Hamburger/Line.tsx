@@ -10,7 +10,6 @@ const Line: FC<LineProps> = ({ ...rest }) => (
       height: "0.25rem",
       background: "primary",
       borderRadius: 10,
-      transformOrigin: "1px",
       transition: "0.3s linear",
       ...rest.sx,
     }}
