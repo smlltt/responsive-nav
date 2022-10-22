@@ -14,16 +14,29 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
         position: "fixed",
         top: 30,
         right: [100, 100, 150],
-        height: "1.5rem",
-        flexDirection: "column",
-        justifyContent: "space-between",
+        height: "2rem",
+        justifyContent: "space-around",
         opacity: isOpen ? 0.7 : 1,
+        flexFlow: "column nowrap",
       }}
       onClick={toggleDisplay}
     >
-      <Line isOpen={isOpen} />
-      <Line />
-      <Line />
+      <Line
+        sx={{
+          transform: isOpen ? "rotate(45deg)" : "rotate(0)",
+        }}
+      />
+      <Line
+        sx={{
+          transform: isOpen ? "translateX(100%)" : "0",
+          opacity: isOpen ? 0 : 1,
+        }}
+      />
+      <Line
+        sx={{
+          transform: isOpen ? "rotate(-45deg)" : "rotate(0)",
+        }}
+      />
     </Flex>
   );
 };

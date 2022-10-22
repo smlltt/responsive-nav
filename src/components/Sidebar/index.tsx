@@ -19,7 +19,7 @@ const Sidebar = () => {
       <Flex
         sx={{
           color: "text",
-          fontFamily: "main",
+          fontFamily: "navbar",
           display: ["block", "block", "block", "none"],
           mt: 50,
           pr: 30,

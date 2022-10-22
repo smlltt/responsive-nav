@@ -6,7 +6,7 @@ const Navbar = () => {
     <Flex
       sx={{
         color: "text",
-        fontFamily: "main",
+        fontFamily: "navbar",
         ml: "auto",
         display: ["none", "none", "none", "block"],
         width: "600px",

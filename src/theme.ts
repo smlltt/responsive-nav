@@ -3,7 +3,9 @@ import "@fontsource/montserrat";
 
 const theme: Theme = {
   fonts: {
-    main: "Montserrat, sans-serif",
+    navbar: "Montserrat, sans-serif",
+    heading: "Montserrat, sans-serif",
+    contentMain: "Helvetica, sans-serif",
   },
   colors: {
     text: "#000",
