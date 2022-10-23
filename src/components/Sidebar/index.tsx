@@ -28,8 +28,9 @@ const Sidebar = () => {
             top: 100,
             height: "calc(100% - 100px)",
             opacity: isOpen ? 1 : 0,
-            transform: isOpen ? "translateX(0)" : "translateX(100%)",
-            transition: "0.3s ease-in-out",
+            //comment out to see the effect
+            // transform: isOpen ? "translateX(0)" : "translateX(100%)",
+            // transition: "0.3s ease-in-out",
           }}
         >
           <Flex
@@ -39,6 +40,8 @@ const Sidebar = () => {
               height: "150px",
               justifyContent: "space-between",
               pr: [50, 50, 100],
+              transform: isOpen ? "translateX(0)" : "translateX(100%)",
+              transition: "0.3s ease-in-out",
             }}
           >
             <Box>Home</Box>
