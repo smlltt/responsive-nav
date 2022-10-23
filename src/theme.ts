@@ -11,6 +11,13 @@ const theme: Theme = {
     text: "#000",
     background: "#fff",
     primary: "#000",
+    modes: {
+      dark: {
+        text: "#fff",
+        background: "#000",
+        primary: "#fff",
+      },
+    },
   },
 };
 

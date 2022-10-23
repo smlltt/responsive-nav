@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex } from "theme-ui";
+import { DarkModeButton } from "../index";
 
 const Navbar = () => {
   return (
@@ -7,17 +8,23 @@ const Navbar = () => {
       sx={{
         color: "text",
         fontFamily: "navbar",
-        ml: "auto",
-        display: ["none", "none", "none", "block"],
-        width: "600px",
+        display: ["none", "none", "none", "flex"],
         mt: 30,
         pr: 30,
-        "&:hover": {
-          cursor: "pointer",
-        },
+        width: "100%",
       }}
     >
-      <Flex sx={{ justifyContent: "space-between" }}>
+      <DarkModeButton />
+      <Flex
+        sx={{
+          justifyContent: "space-between",
+          ml: "auto",
+          width: "600px",
+          "&:hover": {
+            cursor: "pointer",
+          },
+        }}
+      >
         <Box>Home</Box>
         <Box>About us</Box>
         <Box>Contact us</Box>

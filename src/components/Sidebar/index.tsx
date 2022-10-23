@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex } from "theme-ui";
 import Hamburger from "./Hamburger";
+import { DarkModeButton } from "../index";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,9 @@ const Sidebar = () => {
             width: "100%",
           }}
         >
+          <Box sx={{ position: "fixed", top: 30, left: [50, 50, 100] }}>
+            <DarkModeButton />
+          </Box>
           <Hamburger toggleDisplay={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </Box>
         <Flex
