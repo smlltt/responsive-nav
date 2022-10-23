@@ -2,18 +2,8 @@ import React, { useState } from "react";
 import { Box, Flex } from "theme-ui";
 import Hamburger from "./Hamburger";
 
-enum DisplayEnum {
-  NONE = "none",
-  FLEX = "flex",
-}
-
 const Sidebar = () => {
-  const [displayBar, setDisplayBar] = useState<DisplayEnum>(DisplayEnum.NONE);
-  const toggleDisplay = () => {
-    displayBar === DisplayEnum.FLEX
-      ? setDisplayBar(DisplayEnum.NONE)
-      : setDisplayBar(DisplayEnum.FLEX);
-  };
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Flex
@@ -29,18 +19,17 @@ const Sidebar = () => {
           },
         }}
       >
-        <Hamburger
-          toggleDisplay={toggleDisplay}
-          isOpen={displayBar === DisplayEnum.FLEX}
-        />
+        <Hamburger toggleDisplay={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         <Flex
           sx={{
-            display: displayBar,
             background: "background",
             width: "100%",
             position: "fixed",
             top: 100,
             height: "calc(100% - 100px)",
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? "translateX(0)" : "translateX(100%)",
+            transition: "0.3s ease-in-out",
           }}
         >
           <Flex

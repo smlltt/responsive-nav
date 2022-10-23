@@ -13,7 +13,7 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
       sx={{
         position: "fixed",
         top: 30,
-        right: [100, 100, 150],
+        right: [50, 50, 100],
         height: "2rem",
         justifyContent: "space-around",
         opacity: isOpen ? 0.6 : 1,
@@ -23,19 +23,19 @@ const Hamburger: FC<HamburgerProps> = ({ toggleDisplay, isOpen }) => {
     >
       <Line
         sx={{
-          transform: isOpen ? "rotate(45deg)" : "rotate(0)",
+          transform: isOpen ? "translateX(-150%) rotate(45deg)" : "rotate(0)",
           transformOrigin: "top left",
         }}
       />
       <Line
         sx={{
-          transform: isOpen ? "translateX(100%)" : "0",
+          transform: isOpen ? "translateX(-150%)" : "0",
           opacity: isOpen ? 0 : 1,
         }}
       />
       <Line
         sx={{
-          transform: isOpen ? "rotate(-45deg)" : "rotate(0)",
+          transform: isOpen ? "translateX(-150%) rotate(-45deg)" : "rotate(0)",
           transformOrigin: "bottom left",
         }}
       />
