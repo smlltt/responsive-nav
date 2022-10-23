@@ -19,14 +19,24 @@ const Sidebar = () => {
           },
         }}
       >
-        <Hamburger toggleDisplay={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+        <Box
+          sx={{
+            background: "background",
+            position: "fixed",
+            height: "90px",
+            top: 0,
+            width: "100%",
+          }}
+        >
+          <Hamburger toggleDisplay={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+        </Box>
         <Flex
           sx={{
             background: "background",
             width: "100%",
             position: "fixed",
-            top: 100,
-            height: "calc(100% - 100px)",
+            top: 90,
+            height: "100%",
             opacity: isOpen ? 1 : 0,
             //comment out to see the effect
             // transform: isOpen ? "translateX(0)" : "translateX(100%)",
